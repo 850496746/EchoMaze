@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://c134ukwbfu2ti"]
+
+[ext_resource type="Script" uid="uid://b767h7vkot47o" path="res://player.gd" id="1_wbfu4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xkndl"]
+radius = 16.0
+
+[node name="Game" type="Node2D" unique_id=557869969]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1149153764]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.039215688, 0.039215688, 0.101960786, 1)
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=1594823132]
+position = Vector2(100, 0)
+script = ExtResource("1_wbfu4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=883314914]
+shape = SubResource("CircleShape2D_xkndl")
+
+[node name="Visual" type="ColorRect" parent="Player" unique_id=324278729]
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+color = Color(0, 1, 0.53333336, 1)
