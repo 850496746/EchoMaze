@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://cly4uimshs5wj"]
+
+[ext_resource type="Script" uid="uid://bjiqnggbl7hof" path="res://main_menu.gd" id="1_i26rj"]
+
+[node name="MainMenu" type="Node2D" unique_id=1973544021]
+script = ExtResource("1_i26rj")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=115112462]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.039215688, 0.039215688, 0.101960786, 1)
+
+[node name="TitleLabel" type="Label" parent="." unique_id=228912698]
+offset_left = 375.0
+offset_top = 100.0
+offset_right = 775.0
+offset_bottom = 180.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 80
+text = "ECHO MAZE "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StartButton" type="Button" parent="." unique_id=101525059]
+offset_left = 376.0
+offset_top = 280.0
+offset_right = 776.0
+offset_bottom = 340.0
+theme_override_font_sizes/font_size = 32
+text = "START"
+
+[node name="CreditsButton" type="Button" parent="." unique_id=736510825]
+offset_left = 376.0
+offset_top = 360.0
+offset_right = 776.0
+offset_bottom = 420.0
+theme_override_font_sizes/font_size = 32
+text = "CREDITS"
+
+[node name="QuitButton" type="Button" parent="." unique_id=907909210]
+offset_left = 376.0
+offset_top = 440.0
+offset_right = 776.0
+offset_bottom = 500.0
+theme_override_font_sizes/font_size = 32
+text = "QUIT"
