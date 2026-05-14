@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://dlrkn5v0hawj7"]
+
+[ext_resource type="Script" uid="uid://blbvt3xokrnjn" path="res://credits.gd" id="1_ynf4x"]
+
+[node name="Credits" type="Node2D" unique_id=605110526]
+script = ExtResource("1_ynf4x")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1477226089]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.039215688, 0.039215688, 0.101960786, 1)
+
+[node name="CreditsLabel" type="Label" parent="." unique_id=116157565]
+offset_left = 276.0
+offset_top = 150.0
+offset_right = 876.0
+offset_bottom = 450.0
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 32
+text = "ECHO MAZE
+
+Developed by:
+Liu Yonglin
+
+Built with Godot 4"
+horizontal_alignment = 1
+
+[node name="BackButton" type="Button" parent="." unique_id=2087235054]
+offset_left = 326.0
+offset_top = 480.0
+offset_right = 626.0
+offset_bottom = 540.0
+theme_override_font_sizes/font_size = 32
+text = "BACK"
