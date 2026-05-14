@@ -3,12 +3,19 @@
 [ext_resource type="Script" uid="uid://b767h7vkot47o" path="res://player.gd" id="1_wbfu4"]
 [ext_resource type="Script" uid="uid://5featvp6qbfq" path="res://maze.gd" id="2_xkndl"]
 [ext_resource type="Script" uid="uid://dfn7aiu8fte0w" path="res://exit.gd" id="3_u44n3"]
+[ext_resource type="Script" uid="uid://bxdf8cf8c01sp" path="res://enemy.gd" id="4_sb48q"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xkndl"]
 radius = 16.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sb48q"]
 size = Vector2(40, 40)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_t88pq"]
+radius = 16.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sb48q"]
+radius = 20.0
 
 [node name="Game" type="Node2D" unique_id=557869969]
 
@@ -50,3 +57,24 @@ offset_top = -20.0
 offset_right = 20.0
 offset_bottom = 20.0
 color = Color(1, 1, 0, 1)
+
+[node name="Enemy" type="CharacterBody2D" parent="." unique_id=878833346]
+position = Vector2(400, 300)
+script = ExtResource("4_sb48q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy" unique_id=1710568874]
+shape = SubResource("CircleShape2D_t88pq")
+
+[node name="Visual" type="ColorRect" parent="Enemy" unique_id=1436462764]
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+color = Color(1, 0.2, 0.2, 1)
+
+[node name="DetectionArea" type="Area2D" parent="Enemy" unique_id=1901414009]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/DetectionArea" unique_id=303268911]
+shape = SubResource("CircleShape2D_sb48q")
+
+[connection signal="body_entered" from="Enemy/DetectionArea" to="Enemy" method="_on_detection_area_body_entered"]
